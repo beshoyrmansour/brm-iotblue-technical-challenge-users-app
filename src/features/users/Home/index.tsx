@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Card, Avatar, Row, Col, Skeleton, Space, Button } from 'antd';
-import { StarOutlined, LikeOutlined, UserAddOutlined, UserOutlined } from '@ant-design/icons';
+import { Card, Avatar, Row, Col, notification, Button } from 'antd';
+import { UserAddOutlined, UserOutlined } from '@ant-design/icons';
 import { useAppDispatch, useAppSelector } from '../../../app/hooks';
 import { setIsLoading, setUsersList, setMoreUsersList } from '.././usersSlice';
 import { AxiosResponse } from 'axios';
@@ -42,7 +42,14 @@ const Home = () => {
     }
 
     const handleCloseAddNewUserDrawer = (shouldRefresh: boolean) => {
-        if (shouldRefresh) getUsersList()
+        if (shouldRefresh) {
+            getUsersList();
+            notification.open({
+                message: 'Created Successfully',
+                description:
+                    'The new user was created Successfully',
+            });
+        }
         setShowAddNewUserDrawer(false)
     }
     const handleOpenAddNewUserDrawer = () => {

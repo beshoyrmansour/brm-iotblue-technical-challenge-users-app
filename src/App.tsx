@@ -1,56 +1,34 @@
 import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { Layout, Typography } from 'antd';
+
+
 import './App.css';
+import Home from './features/users/Home';
+import UserDetails from './features/users/UserDetails';
 
 function App() {
+  const { Header, Content, Footer } = Layout;
+  const { Title } = Typography;
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
+      <Layout className="app-layout">
+        <Header className="app-header">
+          <Title className="app-title" type="warning" id="app_title">DUMMY</Title>
+          <div className="logo" />
+        </Header>
+        <Content className="app-content">
+          <Router>
+            <Routes>
+              <Route path="/" caseSensitive={false} element={<Home />} />
+              <Route path="/:userId" caseSensitive={false} element={<UserDetails />} />
+            </Routes>
+          </Router>
+
+        </Content>
+        <Footer style={{ textAlign: 'center' }}>Lorem ipsum ©2022 by Beshoy R. Mansour</Footer>
+      </Layout>
     </div>
   );
 }

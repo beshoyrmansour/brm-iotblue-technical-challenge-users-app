@@ -1,0 +1,8 @@
+.user-details-card{
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+
+img.user-details-card-img{
+    border-radius: 10px 10px 0px 0px;
+}

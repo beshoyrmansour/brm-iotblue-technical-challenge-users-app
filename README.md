@@ -1,3 +1,18 @@
+# DUMMY USERS APP 
+This app was created following instructions provided by IoTBlue as part of their technical challenge.
+
+## LIVE PREVIEW :
+ [http://brm-user-app.surge.sh/](http://brm-user-app.surge.sh/)
+
+## Libraries
+### -   Redux toolkit - [learn more](https://redux-toolkit.js.org/)
+to provide main app state management functionality
+### -   Ant Design - [learn more](https://ant.design/docs/react/introduce)
+to provide basic UI elements such as Layout cards lists ...etc
+### -   dummyAPI - [learn more](https://dummyapi.io/docs)
+to provide somedummy data to work with
+ 
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
 
 ## Available Scripts

@@ -1,0 +1,1 @@
+export const DUMMy_API = `https://dummyapi.io/data/${process.env.REACT_APP_DUMMY_API_VERSION}`
